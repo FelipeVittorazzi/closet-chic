@@ -13,8 +13,10 @@ Route::get('/', function () {
 
 Route::get('/usuario', [UserController::class, 'index']);
 
-Route::resource('products', ProductController::class);
+// Produto
+Route::get('/produtos', [ProductController::class, 'index'])->name('admin.produto');
 Route::get('/produto-novo', [ProductController::class, 'creating']);
-Route::post('/product', [ProductController::class, 'create']);
+Route::post('/produto', [ProductController::class, 'create'])->name('produto.form');
+
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

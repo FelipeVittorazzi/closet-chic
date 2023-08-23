@@ -4,8 +4,8 @@
 <div class="products">
     <h1>Produtos</h1>
 
-    <div>
-        <a href="product"></a>
+    <div class="btn btn-success mb-3">
+        <a class="link-light text-decoration-none" href="produto-novo">Novo Produto</a>
     </div>
 
     <table class="table table-hover">

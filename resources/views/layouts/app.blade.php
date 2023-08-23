@@ -56,7 +56,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="products" class="nav-link text-white">
+                                <a href="produtos" class="nav-link text-white">
                                     <svg class="bi me-2" width="16" height="16">
                                         <use xlink:href="#grid"></use>
                                     </svg>

@@ -64,6 +64,14 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="alugueis" class="nav-link text-white">
+                                    <svg class="bi me-2" width="16" height="16">
+                                        <use xlink:href="#grid"></use>
+                                    </svg>
+                                    Aluguéis
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#" class="nav-link text-white">
                                     <svg class="bi me-2" width="16" height="16">
                                         <use xlink:href="#people-circle"></use>

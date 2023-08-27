@@ -15,6 +15,10 @@ class Category extends Model
         'description',
     ];
 
+    public function product() {
+        return $this->hasMany(Product::class);
+    }
+
     /**
      * The table associated with the model.
      *

@@ -29,4 +29,11 @@ class CategoryController extends Controller
 
         return  redirect()->route('admin.categoria')->with('success', 'Categoria criada com sucesso!');
     }
+
+    public function products(Category $category)
+    {
+        $category->load('products');
+
+        return view('products')->withCategory($category);
+    }
 }

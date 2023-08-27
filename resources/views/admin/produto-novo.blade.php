@@ -73,7 +73,14 @@
                 <label for="category_id" class="col-md-4 col-form-label text-md-end">Categoria</label>
 
                 <div class="col-md-6">
-                    <input id="category_id" name="category_id" type="text" class="form-control" required autofocus>
+                    <select id="category_id" name="category_id" class="form-select" aria-label="Default select example" required autofocus>
+                        <option selected>Selecione uma categoria</option>
+                        @foreach($categories as $category)
+                        <option value="{{$category->id}}">
+                            {{$category->name}}
+                        </option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -12,22 +13,22 @@ class ProductController extends Controller
 {
     public function index(): View
     {
-        $products = DB::table('products')->get();
- 
+        $products = Product::all();
+
         return view('admin.produto', ['products' => $products]);
     }
 
     public function creating(): View
     {
-        $products = DB::table('products')->get();
- 
-        return view('admin.produto-novo', ['products' => $products]);
+        $categories = Category::all();
+
+        return view('admin.produto-novo', ['categories' => $categories]);
     }
 
     public function create(Request $request)
     {
-        Product::create($request->all());
+        $product = Product::create($request->all());
 
-        return  redirect()->route('admin.produto')->with('success', 'Contato atualizado com sucesso!');
+        return redirect()->route('admin.produto')->with('success', 'Produto cadastrado com sucesso!');
     }
 }

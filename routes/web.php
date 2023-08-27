@@ -30,5 +30,7 @@ Route::post('/aluguel', [RentController::class, 'create'])->name('aluguel.form')
 Route::get('/categorias',[CategoryController::class, 'index'])->name('admin.categoria');
 Route::get('/nova-categoria', [CategoryController::class, 'creating']);
 Route::post('/categoria', [CategoryController::class, 'create'])->name('categoria.form');
+Route::get('/categorias/{id}/produtos', [CategoryController::class, 'products']);
+
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

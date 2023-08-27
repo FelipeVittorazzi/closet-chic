@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="products">
+    <div class="categories">
         <h1>Categorias</h1>
 
         <div class="btn btn-success mb-3">
@@ -28,5 +28,5 @@
             @endforeach
             </tbody>
         </table>
-
+    </div>
 @endsection

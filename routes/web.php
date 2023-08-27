@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RentController;
+use App\Http\Controllers\CategoryController;
 
 
 Auth::routes();
@@ -25,6 +26,9 @@ Route::get('/alugueis', [RentController::class, 'index'])->name('admin.aluguel')
 Route::get('/novo-aluguel', [RentController::class, 'creating']);
 Route::post('/aluguel', [RentController::class, 'create'])->name('aluguel.form');
 
-
+// Categoria
+Route::get('/categorias',[CategoryController::class, 'index'])->name('admin.categoria');
+Route::get('/nova-categoria', [CategoryController::class, 'creating']);
+Route::post('/categoria', [CategoryController::class, 'create'])->name('categoria.form');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

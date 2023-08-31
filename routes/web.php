@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RentController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CostumerController;
 
 
 Auth::routes();
@@ -15,6 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/usuario', [UserController::class, 'index']);
+
+// Cliente
+Route::get('/clientes', [CostumerController::class, 'index'])->name('admin.cliente');
+Route::get('/novo-cliente', [CostumerController::class, 'creating']);
+Route::post('/cliente', [CostumerController::class, 'create'])->name('cliente.form');
 
 // Produto
 Route::get('/produtos', [ProductController::class, 'index'])->name('admin.produto');

@@ -17,7 +17,7 @@
                 <label for="cpf" class="col-md-4 col-form-label text-md-end">CPF</label>
 
                 <div class="col-md-6">
-                    <input id="cpf" name="cpf" type="text" class="form-control is-invalid cpf" value="{{ old('cpf') }}" required autofocus>
+                    <input id="cpf" name="cpf" type="text" class="form-control cpf" value="{{ old('cpf') }}" required autofocus>
                     @error('cpf')
                     <div class="error-message invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -28,7 +28,7 @@
                 <label for="phone" class="col-md-4 col-form-label text-md-end">Telefone</label>
 
                 <div class="col-md-6">
-                    <input id="phone" name="phone" type="tel" class="form-control is-invalid phone" required autofocus>
+                    <input id="phone" name="phone" type="tel" class="form-control phone" required autofocus>
                     @error('phone')
                     <div class="error-message invalid-feedback">{{ $message }}</div>
                     @enderror

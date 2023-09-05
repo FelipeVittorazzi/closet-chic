@@ -24,7 +24,7 @@
                 <td>00{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
                 <td>R${{ $product->price }}</td>
-                <td>{{ $product->category_id }}</td>
+                <td>{{ $product->category->name }}</td>
                 <td>{{ $product->created_at }}</td>
             </tr>
             @endforeach
